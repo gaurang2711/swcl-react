@@ -1,0 +1,159 @@
+header {
+    color: var(--text-color);
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    z-index: 100;
+    border-bottom: 1px solid var(--header-border-color);
+    padding: 10px 20px;
+}
+
+header .logo {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+header nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+header nav ul {
+    text-align: right;
+    margin-right: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 15px;
+}
+
+header a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+header a:hover {
+    color: var(--text-color);
+}
+
+nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:focus {
+    color: #7b46c1;
+    outline: none;
+
+}
+
+header h3 {
+    background-image: linear-gradient(145deg, #331abd, #9025fc, #ded4e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    animation: randomAnimation 8s linear infinite;
+}
+
+@keyframes randomAnimation {
+    0% {
+        background-position: 0% 50%;
+        opacity: 1;
+    }
+
+    25% {
+        background-position: 100% 50%;
+        opacity: 0.8;
+    }
+
+    50% {
+        background-position: 0% 50%;
+        opacity: 0.6;
+    }
+
+    75% {
+        background-position: 100% 50%;
+        opacity: 0.9;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 0 5px;
+        border-bottom: none;
+        flex-direction: row;
+        align-items: center;
+        backdrop-filter: blur(10px);
+    }
+
+    header .logo {
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+
+    header nav {
+        margin-right: 10px;
+        margin-left: auto;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav ul.active {
+        background: var(--nothing);
+        backdrop-filter: blur(10px);
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+.lgtBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.lgtBtn img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.lgtBtn img {
+    transition: opacity 0.3s ease;
+}
